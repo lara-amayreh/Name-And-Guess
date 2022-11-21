@@ -100,17 +100,21 @@ function loadInput() {
       dvMessage.textContent = " You can not Enter a space";
       dvMessage.className = "alert alert-dark";
       setTimeout(() => resetAlert(), 1500);
-    } else if (event.key === "Enter") {
-      fetchData(Name.value);
+    } else if (event.key === "Enter" && Name.value !== "") {
+      {
+        fetchData(Name.value);
+      }
       Name.value = "";
     }
   });
 }
 let Name = document.querySelector(".Name");
 let Guess = document.querySelector(".Guess");
-Guess.addEventListener("click", function () {
-  fetchData(Name.value);
-  Name.value = "";
+Guess.addEventListener("click", () => {
+  if (Name.value !== "") {
+    fetchData(Name.value);
+    Name.value = "";
+  }
 });
 
 let dvMessage = document.querySelector(".dvMessage");
