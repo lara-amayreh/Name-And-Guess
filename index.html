@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Name and Guess</title>
+</head>
+
+<body>
+    <div class="container-fluid bg-dark text-light py-3 " style="min-height:100vh; min-width:100vw">
+        <div class="container ">
+            <header class="text-center">
+                <h1 class="text-white-50 ">Name & Guess</h1>
+                <div class="dvMessage"></div>
+            </header>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="input d-flex text-center align-items-center justify-content-center py-3">
+                    <label for="name" class="pe-2">Name:</label>
+                    <input class=" p-2 mx-1 rounded border-0 Name" type="text" name="name"
+                        placeholder="Enter your Name...">
+                    <button type="button" class="btn btn-secondary px-2 Guess">Guess</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="container col-9">
+                    <div class="results pt-2 col-12"></div>
+
+                    <div class="row flags"></div>
+                </div>
+                <div class="guessed-names  rounded col-2  ms-auto border d-flex flex-column
+                align-items-center" style="height:fit-content; overflow: hidden; max-height: 70vh;">
+                    <p class="fw-bold border-bottom pb-1 py-2 text-white-50">Guessed Names</p>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
